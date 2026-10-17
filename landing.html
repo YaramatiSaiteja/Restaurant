@@ -8,7 +8,44 @@
     <link rel="stylesheet" href="landing.css"/>
   </head>
   <body>
-    <h1>Welcome to Our Restaurant</h1>
+    <nav class="navbar navbar-expand-sm navbar-light bg-dark shopease-navbar">
+            <a class="navbar-brand font-weight-bold" href="#">
+                Han<span class="brand-accent">gny</span>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                    data-toggle="collapse" data-target="#navbarMenu"
+                    aria-controls="navbarMenu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ml-auto align-items-sm-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Deals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cart-link" href="#">
+                            🛒 Cart
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    <div class="container-fluid">
+        <div class="container p-5">
+        <h1 class="heading">Welcome to Han<span class="brand-accent">gny</span> Restaurant</h1>
+        <p class="lead">Enjoy the best food in town!</p>
+        <button class="btn btn-primary btn-lg" id="orderNowBtn">Order Now</button>
+        </div>
+    </div>
   </body>
   <script src="landing.js"></script>
 </html>
