@@ -1,0 +1,1 @@
+let containerEl = document.getElementById("deals-container");
