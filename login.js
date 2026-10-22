@@ -3,6 +3,11 @@ let password = document.getElementById("password");
 let registerButton = document.getElementById("registerButton");
 let passwordError = document.getElementById("passwordError");
 let usernameError = document.getElementById("usernameError");
+let loginForm = document.getElementById("loginForm");
+
+loginForm.addEventListener("submit", function(event){
+  event.preventDefault();
+});
 
 username.addEventListener("blur",function(){
   if(username.value ===""){
