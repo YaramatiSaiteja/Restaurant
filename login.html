@@ -10,10 +10,10 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-md-6 mx-auto">
+        <div class="col-md-6 mx-auto mt-5">
           <h2>Login</h2>
-          <form>
-            <div class="form-group" id="loginForm">
+          <form id="loginForm">
+            <div class="form-group">
               <label for="username">Username</label>
               <input type="text" class="form-control" id="username" placeholder="Enter username">
               <p class="text-danger" id="usernameError"></p>
@@ -24,9 +24,11 @@
               <p class="text-danger" id="passwordError"></p>
             </div>
             <button type="submit" class="btn btn-primary">Login</button>
+            <a href="register.html" class="btn btn-secondary">Don't have an account?</a>
           </form>
         </div>
       </div>
     </div>
+    <script src="login.js"></script>
   </body>
   </html>

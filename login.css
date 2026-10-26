@@ -1,0 +1,137 @@
+/* Page background */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6fb;
+}
+
+.login-page {
+    min-height: 100vh;
+    padding: 40px 0;
+    background: linear-gradient(135deg, #f4f6fb, #e8edff);
+}
+
+/* Login card */
+.login-card {
+    border: none;
+    border-radius: 18px;
+    background-color: #ffffff;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.09);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.login-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* Heading */
+.restaurant-icon {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.login-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #252b42;
+    margin-bottom: 8px;
+}
+
+.login-subtitle {
+    font-size: 14px;
+    color: #7b8193;
+    margin-bottom: 0;
+}
+
+/* Form */
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #353b50;
+    margin-bottom: 8px;
+}
+
+.custom-input {
+    height: 48px;
+    border: 1px solid #dce1ec;
+    border-radius: 9px;
+    padding: 10px 14px;
+    font-size: 14px;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.custom-input:focus {
+    border-color: #5269e8;
+    box-shadow: 0 0 0 3px rgba(82, 105, 232, 0.12);
+}
+
+.custom-input::placeholder {
+    color: #a0a6b5;
+}
+
+.text-danger {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Login button */
+.login-btn {
+    min-height: 48px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 9px;
+    background-color: #5269e8;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.login-btn:hover {
+    background-color: #4054cc;
+    transform: translateY(-1px);
+}
+
+.login-btn:focus {
+    box-shadow: 0 0 0 3px rgba(82, 105, 232, 0.2);
+}
+
+/* Register link */
+a {
+    color: #5269e8;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #4054cc;
+    text-decoration: underline;
+}
+
+.footer-text {
+    font-size: 13px;
+    color: #858ba0;
+}
+
+/* Mobile screens */
+@media (max-width: 576px) {
+    .login-page {
+        padding: 24px 0;
+    }
+
+    .login-title {
+        font-size: 24px;
+    }
+
+    .login-card {
+        border-radius: 14px;
+    }
+}
