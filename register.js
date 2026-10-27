@@ -66,5 +66,7 @@ registerForm.addEventListener("submit", function (event) {
 
     alert("Registration successful!");
 
+    window.location.href = "login.html";
+
     registerForm.reset();
 });
