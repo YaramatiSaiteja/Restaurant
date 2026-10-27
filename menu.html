@@ -1,92 +1,517 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="menu.css"/>
-  </head>
-  <body>
-    <h1 class="text-center mt-2 mb-2">Our Menu</h1>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="card">
-            <img src="dish1.jpg" class="card-img-top" alt="Dish 1"/>
-            <div class="card-body">
-              <h5 class="card-title">Dish 1</h5>
-              <p class="card-text">Description of Dish 1.</p>
-              <a href="#" id="button1" class="btn btn-primary">Order Now</a>
-            </div>
-          </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hangny | Our Menu</title>
+
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="menu.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm navbar-dark shopease-navbar">
+        <a class="navbar-brand font-weight-bold" href="landing.html">
+            Han<span class="brand-accent">gny</span>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-toggle="collapse"
+                data-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ml-auto align-items-sm-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="landing.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="menu.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="deals.html">Deals</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link cart-link" href="cart.html">🛒 Cart</a>
+                </li>
+            </ul>
         </div>
-        <div class="col-md-3">
-          <div class="card">
-            <img src="dish2.jpg" class="card-img-top" alt="Dish 2"/>
-            <div class="card-body">
-              <h5 class="card-title">Dish 2</h5>
-              <p class="card-text">Description of Dish 2.</p>
-              <a href="#" class="btn btn-primary">Order Now</a>
-            </div>
-          </div>
+    </nav>
+
+
+    <!-- Menu Header -->
+    <section class="menu-hero">
+        <div class="container">
+            <span class="menu-tag">MADE FRESH FOR YOU</span>
+            <h1>Explore Our <span>Menu</span></h1>
+            <p>Find your favourites, discover new flavours, and enjoy every bite.</p>
         </div>
-        <div class="col-md-3">
-          <div class="card">
-            <img src="dish3.jpg" class="card-img-top" alt="Dish 3"/>
-            <div class="card-body">
-              <h5 class="card-title">Dish 3</h5>
-              <p class="card-text">Description of Dish 3.</p>
-              <a href="#" class="btn btn-primary">Order Now</a>
+    </section>
+
+
+    <!-- Category Navigation -->
+    <section class="category-navigation">
+        <div class="container">
+            <div class="category-pills">
+                <a href="#burgers" class="category-pill">🍔 Burgers</a>
+                <a href="#pizza" class="category-pill">🍕 Pizza</a>
+                <a href="#pasta" class="category-pill">🍝 Pasta</a>
+                <a href="#starters" class="category-pill">🥗 Starters</a>
+                <a href="#desserts" class="category-pill">🍰 Desserts</a>
+                <a href="#drinks" class="category-pill">🥤 Drinks</a>
             </div>
-          </div>
         </div>
-            <div class="col-md-3">
-            <div class="card">  
-            <img src="dish3.jpg" class="card-img-top" alt="Dish 3"/>
-            <div class="card-body">
-              <h5 class="card-title">Dish 3</h5>
-              <p class="card-text">Description of Dish 3.</p>
-              <a href="#" class="btn btn-primary">Order Now</a>
+    </section>
+
+
+    <!-- Burgers -->
+    <section class="menu-category" id="burgers">
+        <div class="container">
+            <div class="category-heading">
+                <div>
+                    <span class="category-eyebrow">JUICY AND DELICIOUS</span>
+                    <h2>Burgers <span>🍔</span></h2>
+                </div>
             </div>
+
+            <div class="row">
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card food-card h-100">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58bd?auto=format&fit=crop&w=800&q=80"
+                             class="card-img-top" alt="Classic burger">
+                        <div class="card-body">
+                            <h5 class="card-title">Classic Burger</h5>
+                            <p class="card-text">Juicy patty with fresh lettuce, tomato and special sauce.</p>
+                            <div class="food-card-bottom">
+                                <span class="food-price">₹199</span>
+                                <button class="btn add-cart-btn"
+                                        data-name="Classic Burger"
+                                        data-price="199">Add to Cart +</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card food-card h-100">
+                        <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433a?auto=format&fit=crop&w=800&q=80"
+                             class="card-img-top" alt="Cheese burger">
+                        <div class="card-body">
+                            <h5 class="card-title">Cheese Burger</h5>
+                            <p class="card-text">A delicious burger layered with melted cheese and tasty sauces.</p>
+                            <div class="food-card-bottom">
+                                <span class="food-price">₹229</span>
+                                <button class="btn add-cart-btn"
+                                        data-name="Cheese Burger"
+                                        data-price="229">Add to Cart +</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card food-card h-100">
+                        <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=800&q=80"
+                             class="card-img-top" alt="Double patty burger">
+                        <div class="card-body">
+                            <h5 class="card-title">Double Patty Burger</h5>
+                            <p class="card-text">Double the patty, double the flavour, and extra satisfaction.</p>
+                            <div class="food-card-bottom">
+                                <span class="food-price">₹279</span>
+                                <button class="btn add-cart-btn"
+                                        data-name="Double Patty Burger"
+                                        data-price="279">Add to Cart +</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            </div>
-            </div>
-            <div class="row mt-2">
-            <div class="col-md-3">
-            <div class="card">
-            <img src="dish3.jpg" class="card-img-top" alt="Dish 3"/>
-            <div class="card-body">
-              <h5 class="card-title">Dish 3</h5>
-              <p class="card-text">Description of Dish 3.</p>
-              <a href="#" class="btn btn-primary">Order Now</a>
-            </div>
-            </div>
-            </div>
-            <div class="col-md-3">
-            <div class="card">
-            <img src="dish3.jpg" class="card-img-top" alt="Dish 3"/>
-            <div class="card-body">
-              <h5 class="card-title">Dish 3</h5>
-              <p class="card-text">Description of Dish 3.</p>
-              <a href="#" class="btn btn-primary">Order Now</a>
-            </div>
-            </div>
-            </div>
-            <div class="col-md-3">
-            <div class="card">
-            <img src="dish3.jpg" class="card-img-top" alt="Dish 3"/>
-            <div class="card-body">
-              <h5 class="card-title">Dish 3</h5>
-              <p class="card-text">Description of Dish 3.</p>
-              <a href="#" class="btn btn-primary">Order Now</a>
-            </div>
-            </div>
-            </div>
-            </div>
-          </div>
         </div>
-      </div>
-  </body>
-  <script src="menu.js"></script>
+    </section>
+
+
+    <!-- Pizza -->
+    <section class="menu-category alternate-section" id="pizza">
+        <div class="container">
+            <div class="category-heading">
+                <div>
+                    <span class="category-eyebrow">CHEESY GOODNESS</span>
+                    <h2>Pizza <span>🍕</span></h2>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card food-card h-100">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80"
+                             class="card-img-top" alt="Cheese pizza">
+                        <div class="card-body">
+                            <h5 class="card-title">Classic Cheese Pizza</h5>
+                            <p class="card-text">Crispy crust covered with melted cheese and rich tomato sauce.</p>
+                            <div class="food-card-bottom">
+                                <span class="food-price">₹299</span>
+                                <button class="btn add-cart-btn"
+                                        data-name="Classic Cheese Pizza"
+                                        data-price="299">Add to Cart +</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card food-card h-100">
+                        <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=800&q=80"
+                             class="card-img-top" alt="Vegetable pizza">
+                        <div class="card-body">
+                            <h5 class="card-title">Garden Veggie Pizza</h5>
+                            <p class="card-text">Colourful vegetables, herbs and cheese on a golden crust.</p>
+                            <div class="food-card-bottom">
+                                <span class="food-price">₹329</span>
+                                <button class="btn add-cart-btn"
+                                        data-name="Garden Veggie Pizza"
+                                        data-price="329">Add to Cart +</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card food-card h-100">
+                        <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=800&q=80"
+                             class="card-img-top" alt="Special pizza">
+                        <div class="card-body">
+                            <h5 class="card-title">Hangny Special Pizza</h5>
+                            <p class="card-text">A satisfying combination of signature toppings and cheese.</p>
+                            <div class="food-card-bottom">
+                                <span class="food-price">₹379</span>
+                                <button class="btn add-cart-btn"
+                                        data-name="Hangny Special Pizza"
+                                        data-price="379">Add to Cart +</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Pasta -->
+    <section class="menu-category" id="pasta">
+        <div class="container">
+            <div class="category-heading">
+                <div>
+                    <span class="category-eyebrow">COMFORT IN EVERY BITE</span>
+                    <h2>Pasta <span>🍝</span></h2>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card food-card h-100">
+                        <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=80"
+                             class="card-img-top" alt="Italian pasta">
+                        <div class="card-body">
+                            <h5 class="card-title">Italian Pasta</h5>
+                            <p class="card-text">Pasta tossed in a flavourful sauce with aromatic herbs.</p>
+                            <div class="food-card-bottom">
+                                <span class="food-price">₹249</span>
+                                <button class="btn add-cart-btn"
+                                        data-name="Italian Pasta"
+                                        data-price="249">Add to Cart +</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card food-card h-100">
+                        <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80"
+                             class="card-img-top" alt="Creamy pasta">
+                        <div class="card-body">
+                            <h5 class="card-title">Creamy Alfredo</h5>
+                            <p class="card-text">Smooth and creamy pasta with a rich, comforting flavour.</p>
+                            <div class="food-card-bottom">
+                                <span class="food-price">₹279</span>
+                                <button class="btn add-cart-btn"
+                                        data-name="Creamy Alfredo"
+                                        data-price="279">Add to Cart +</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card food-card h-100">
+                        <img src="https://images.unsplash.com/photo-1556761223-4c4282c73f77?auto=format&fit=crop&w=800&q=80"
+                             class="card-img-top" alt="Pasta with tomato sauce">
+                        <div class="card-body">
+                            <h5 class="card-title">Tomato Basil Pasta</h5>
+                            <p class="card-text">A bright tomato sauce with basil and delicious seasoning.</p>
+                            <div class="food-card-bottom">
+                                <span class="food-price">₹259</span>
+                                <button class="btn add-cart-btn"
+                                        data-name="Tomato Basil Pasta"
+                                        data-price="259">Add to Cart +</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Starters -->
+    <section class="menu-category alternate-section" id="starters">
+        <div class="container">
+            <div class="category-heading">
+                <div>
+                    <span class="category-eyebrow">A DELICIOUS BEGINNING</span>
+                    <h2>Starters <span>🥗</span></h2>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card food-card h-100">
+                        <img src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=800&q=80"
+                             class="card-img-top" alt="Crispy fries">
+                        <div class="card-body">
+                            <h5 class="card-title">Crispy French Fries</h5>
+                            <p class="card-text">Golden fries with a crunchy outside and fluffy centre.</p>
+                            <div class="food-card-bottom">
+                                <span class="food-price">₹119</span>
+                                <button class="btn add-cart-btn"
+                                        data-name="Crispy French Fries"
+                                        data-price="119">Add to Cart +</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card food-card h-100">
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80"
+                             class="card-img-top" alt="Crispy vegetable snacks">
+                        <div class="card-body">
+                            <h5 class="card-title">Crispy Veg Bites</h5>
+                            <p class="card-text">Crunchy vegetarian bites served as a tasty snack.</p>
+                            <div class="food-card-bottom">
+                                <span class="food-price">₹149</span>
+                                <button class="btn add-cart-btn"
+                                        data-name="Crispy Veg Bites"
+                                        data-price="149">Add to Cart +</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card food-card h-100">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80"
+                             class="card-img-top" alt="Freshly baked savoury dish">
+                        <div class="card-body">
+                            <h5 class="card-title">Chef's Special Bites</h5>
+                            <p class="card-text">A delicious starter to share before your main course.</p>
+                            <div class="food-card-bottom">
+                                <span class="food-price">₹179</span>
+                                <button class="btn add-cart-btn"
+                                        data-name="Chef's Special Bites"
+                                        data-price="179">Add to Cart +</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Desserts -->
+    <section class="menu-category" id="desserts">
+        <div class="container">
+            <div class="category-heading">
+                <div>
+                    <span class="category-eyebrow">SAVE ROOM FOR SOMETHING SWEET</span>
+                    <h2>Desserts <span>🍰</span></h2>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card food-card h-100">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80"
+                             class="card-img-top" alt="Chocolate cake">
+                        <div class="card-body">
+                            <h5 class="card-title">Chocolate Cake</h5>
+                            <p class="card-text">Rich chocolate layers for a delightful sweet finish.</p>
+                            <div class="food-card-bottom">
+                                <span class="food-price">₹159</span>
+                                <button class="btn add-cart-btn"
+                                        data-name="Chocolate Cake"
+                                        data-price="159">Add to Cart +</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card food-card h-100">
+                        <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80"
+                             class="card-img-top" alt="Ice cream dessert">
+                        <div class="card-body">
+                            <h5 class="card-title">Ice Cream Sundae</h5>
+                            <p class="card-text">A cool, creamy treat topped with sweet extras.</p>
+                            <div class="food-card-bottom">
+                                <span class="food-price">₹129</span>
+                                <button class="btn add-cart-btn"
+                                        data-name="Ice Cream Sundae"
+                                        data-price="129">Add to Cart +</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card food-card h-100">
+                        <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80"
+                             class="card-img-top" alt="Sweet dessert bowl">
+                        <div class="card-body">
+                            <h5 class="card-title">Sweet Treat Bowl</h5>
+                            <p class="card-text">A delightful dessert to finish your meal on a high note.</p>
+                            <div class="food-card-bottom">
+                                <span class="food-price">₹149</span>
+                                <button class="btn add-cart-btn"
+                                        data-name="Sweet Treat Bowl"
+                                        data-price="149">Add to Cart +</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Drinks -->
+    <section class="menu-category alternate-section" id="drinks">
+        <div class="container">
+            <div class="category-heading">
+                <div>
+                    <span class="category-eyebrow">REFRESH AND RECHARGE</span>
+                    <h2>Drinks <span>🥤</span></h2>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card food-card h-100">
+                        <img src="https://images.unsplash.com/photo-1513558161293-cdaf765edfd7?auto=format&fit=crop&w=800&q=80"
+                             class="card-img-top" alt="Refreshing fruit drink">
+                        <div class="card-body">
+                            <h5 class="card-title">Fresh Fruit Cooler</h5>
+                            <p class="card-text">A refreshing fruity drink for a delicious break.</p>
+                            <div class="food-card-bottom">
+                                <span class="food-price">₹99</span>
+                                <button class="btn add-cart-btn"
+                                        data-name="Fresh Fruit Cooler"
+                                        data-price="99">Add to Cart +</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card food-card h-100">
+                        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=80"
+                             class="card-img-top" alt="Iced coffee">
+                        <div class="card-body">
+                            <h5 class="card-title">Iced Coffee</h5>
+                            <p class="card-text">Chilled coffee with a smooth, rich flavour.</p>
+                            <div class="food-card-bottom">
+                                <span class="food-price">₹129</span>
+                                <button class="btn add-cart-btn"
+                                        data-name="Iced Coffee"
+                                        data-price="129">Add to Cart +</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card food-card h-100">
+                        <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=800&q=80"
+                             class="card-img-top" alt="Refreshing cold drink">
+                        <div class="card-body">
+                            <h5 class="card-title">Chilled Lemon Drink</h5>
+                            <p class="card-text">A refreshing citrus drink with a bright, zesty taste.</p>
+                            <div class="food-card-bottom">
+                                <span class="food-price">₹79</span>
+                                <button class="btn add-cart-btn"
+                                        data-name="Chilled Lemon Drink"
+                                        data-price="79">Add to Cart +</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="menu-footer">
+        <div class="container">
+            <div class="menu-footer-top">
+                <a class="menu-footer-brand" href="home.html">
+                    Han<span>gny</span>
+                </a>
+                <p>Good food. Great mood. Always Hangny.</p>
+
+                <div class="menu-footer-links">
+                    <a href="home.html">Home</a>
+                    <a href="deals.html">Deals</a>
+                    <a href="cart.html">Cart</a>
+                </div>
+            </div>
+
+            <hr>
+
+            <p class="menu-copyright">
+                © 2026 Hangny Restaurant. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="menu.js"></script>
+
+</body>
 </html>

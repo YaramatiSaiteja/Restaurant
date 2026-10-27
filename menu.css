@@ -1,3 +1,320 @@
-.container {
-    padding:10px;
+/* Global */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #29231d;
+}
+
+/* Navbar */
+.shopease-navbar {
+    padding: 14px 7%;
+    min-height: 72px;
+    background: #171717 !important;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-size: 27px;
+    letter-spacing: -1px;
+}
+
+.brand-accent {
+    color: #ffad42;
+}
+
+.shopease-navbar .nav-link {
+    margin-left: 20px;
+    color: #f5f5f5 !important;
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+.shopease-navbar .nav-link:hover,
+.shopease-navbar .nav-link.active {
+    color: #ffad42 !important;
+}
+
+.cart-link {
+    padding: 8px 18px !important;
+    border: 1px solid #ffad42;
+    border-radius: 25px;
+}
+
+/* Menu hero */
+.menu-hero {
+    padding: 55px 0;
+    background: linear-gradient(110deg, #211811, #4c3320);
+    color: #fff;
+}
+
+.menu-tag,
+.category-eyebrow {
+    color: #c7802d;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.menu-tag {
+    color: #ffbd69;
+}
+
+.menu-hero h1 {
+    margin: 12px 0;
+    font-size: clamp(36px, 5vw, 52px);
+    font-weight: 800;
+}
+
+.menu-hero h1 span {
+    color: #ffad42;
+}
+
+.menu-hero p {
+    max-width: 580px;
+    margin-bottom: 0;
+    color: #e3d8cd;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Category navigation */
+.category-navigation {
+    padding: 20px 0;
+    background: #fff;
+    border-bottom: 1px solid #eee5da;
+}
+
+.category-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.category-pill {
+    padding: 10px 16px;
+    border: 1px solid #eadfd2;
+    border-radius: 25px;
+    background: #fffaf4;
+    color: #3b3025;
+    font-size: 13px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.category-pill:hover {
+    border-color: #ffad42;
+    background: #ffad42;
+    color: #211811;
+    text-decoration: none;
+}
+
+/* Category sections */
+.menu-category {
+    padding: 55px 0 35px;
+    background: #fff;
+    scroll-margin-top: 85px;
+}
+
+.alternate-section {
+    background: #faf7f2;
+}
+
+.category-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.category-heading h2 {
+    margin: 8px 0 0;
+    font-size: 30px;
+    font-weight: 800;
+    color: #28211b;
+}
+
+.category-heading h2 span {
+    font-size: 26px;
+}
+
+/* Bootstrap food cards */
+.food-card {
+    overflow: hidden;
+    border: 1px solid #eee5db;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(35, 25, 16, 0.04);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 26px rgba(35, 25, 16, 0.1);
+}
+
+.food-card .card-img-top {
+    width: 100%;
+    height: 215px;
+    object-fit: cover;
+}
+
+.food-card .card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.food-card .card-title {
+    margin-bottom: 10px;
+    color: #29231d;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.food-card .card-text {
+    flex-grow: 1;
+    margin-bottom: 20px;
+    color: #777;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.food-card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #eee9e3;
+}
+
+.food-price {
+    color: #29231d;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.add-cart-btn {
+    padding: 9px 13px;
+    border: 1px solid #ffad42;
+    border-radius: 6px;
+    background: #ffad42;
+    color: #24190e;
+    font-size: 12px;
+    font-weight: 800;
+    transition: all 0.2s ease;
+}
+
+.add-cart-btn:hover {
+    border-color: #e9952b;
+    background: #e9952b;
+    color: #24190e;
+}
+
+/* Footer */
+.menu-footer {
+    padding: 35px 0 18px;
+    background: #171717;
+    color: #aaa;
+}
+
+.menu-footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.menu-footer-brand {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.menu-footer-brand span {
+    color: #ffad42;
+}
+
+.menu-footer-brand:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-footer-top p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.menu-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.menu-footer-links a {
+    color: #bbb;
+    font-size: 13px;
+}
+
+.menu-footer-links a:hover {
+    color: #ffad42;
+    text-decoration: none;
+}
+
+.menu-footer hr {
+    margin: 22px 0 16px;
+    border-color: #333;
+}
+
+.menu-copyright {
+    margin: 0;
+    color: #888;
+    font-size: 11px;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .shopease-navbar {
+        padding: 12px 20px;
+    }
+
+    .shopease-navbar .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .category-pills {
+        gap: 8px;
+    }
+
+    .category-pill {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+
+    .menu-category {
+        padding: 40px 0 20px;
+    }
+
+    .food-card .card-img-top {
+        height: 220px;
+    }
+
+    .menu-footer-top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
 }
