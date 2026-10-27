@@ -1,47 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="landing.css"/>
-  </head>
-  <body>
-    <div class="deals-container">
-      <h1>Special Deals</h1>
-      <p>Check out our special deals and offers!</p>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            <img src="deal1.jpg" class="card-img-top" alt="Deal 1"/>
-            <div class="card-body">
-              <h5 class="card-title">Deal 1</h5>
-              <p class="card-text">Description of Deal 1.</p>
-              <a href="#" class="btn btn-primary">Order Now</a>
-            </div>
-          </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hangny | Special Deals</title>
+
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="deals.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm navbar-dark shopease-navbar">
+        <a class="navbar-brand font-weight-bold" href="home.html">
+            Han<span class="brand-accent">gny</span>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-toggle="collapse"
+                data-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ml-auto align-items-sm-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="deals.html">Deals</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link cart-link" href="cart.html">🛒 Cart</a>
+                </li>
+            </ul>
         </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="deal2.jpg" class="card-img-top" alt="Deal 2"/>
-            <div class="card-body">
-              <h5 class="card-title">Deal 2</h5>
-              <p class="card-text">Description of Deal 2.</p>
-              <a href="#" class="btn btn-primary">Order Now</a>
-            </div>
-          </div>
+    </nav>
+
+
+    <!-- Deals Hero -->
+    <section class="deals-hero">
+        <div class="container">
+            <span class="deals-tag">A LITTLE EXTRA HAPPINESS</span>
+            <h1>Big Cravings.<br><span>Better Deals.</span></h1>
+            <p>
+                Delicious meals, exciting combos, and special savings.
+                Find your next favourite deal at Hangny.
+            </p>
+
+            <a href="#offers" class="deals-primary-btn">
+                Explore Offers ↓
+            </a>
         </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="deal3.jpg" class="card-img-top" alt="Deal 3"/>
-            <div class="card-body">
-              <h5 class="card-title">Deal 3</h5>
-              <p class="card-text">Description of Deal 3.</p>
-              <a href="#" class="btn btn-primary">Order Now</a>
+    </section>
+
+
+    <!-- Featured Offer -->
+    <section class="featured-offer">
+        <div class="container">
+            <div class="featured-offer-box">
+                <div class="featured-offer-content">
+                    <span class="offer-label">HANGNY COMBO SPECIAL</span>
+                    <h2>Your Favourite Combo,<br><span>One Great Price.</span></h2>
+                    <p>
+                        Pair a classic burger with crispy fries and a
+                        refreshing drink for a satisfying meal.
+                    </p>
+
+                    <div class="featured-price">
+                        <span class="old-price">₹399</span>
+                        <span class="new-price">₹329</span>
+                    </div>
+
+                    <a href="#offers" class="deals-primary-btn">
+                        Explore This Deal →
+                    </a>
+                </div>
+
+                <div class="featured-offer-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1568901346375-23c9450c58bd?auto=format&fit=crop&w=1000&q=85"
+                        alt="Burger combo special">
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </body>
+    </section>
+
+
+    <!-- All Offers -->
+    <section class="offers-section" id="offers">
+        <div class="container">
+
+            <div class="offers-heading">
+                <span class="offer-label">SOMETHING DELICIOUS AWAITS</span>
+                <h2>Today's <span>Best Deals</span></h2>
+                <p>Choose a combo and make your meal even more enjoyable.</p>
+            </div>
+
+            <div class="row">
+
+                <!-- Deal 1 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card deal-card h-100">
+                        <div class="deal-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1568901346375-23c9450c58bd?auto=format&fit=crop&w=800&q=80"
+                                class="card-img-top"
+                                alt="Burger meal combo">
+                            <span class="discount-badge">18% OFF</span>
+                        </div>
+
+                        <div class="card-body">
+                            <span class="deal-category">COMBO MEAL</span>
+                            <h5 class="card-title">Burger Buddy Combo</h5>
+                            <p class="card-text">
+                                A classic burger, crispy fries, and a
+                                refreshing drink.
+                            </p>
+
+                            <div class="deal-card-bottom">
+                                <div>
+                                    <span class="old-price">₹399</span>
+                                    <div class="new-price">₹329</div>
+                                </div>
+
+                                <button class="btn claim-deal-btn"
+                                        data-name="Burger Buddy Combo"
+                                        data-price="329">
+                                    Get Deal +
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Deal 2 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card deal-card h-100">
+                        <div class="deal-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80"
+                                class="card-img-top"
+                                alt="Pizza meal">
+                            <span class="discount-badge">SAVE ₹80</span>
+                        </div>
+
+                        <div class="card-body">
+                            <span class="deal-category">PIZZA SPECIAL</span>
+                            <h5 class="card-title">Pizza Party Deal</h5>
+                            <p class="card-text">
+                                Enjoy a delicious pizza with a side
+                                for your next movie night.
+                            </p>
+
+                            <div class="deal-card-bottom">
+                                <div>
+                                    <span class="old-price">₹399</span>
+                                    <div class="new-price">₹319</div>
+                                </div>
+
+                                <button class="btn claim-deal-btn"
+                                        data-name="Pizza Party Deal"
+                                        data-price="319">
+                                    Get Deal +
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Deal 3 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card deal-card h-100">
+                        <div class="deal-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=80"
+                                class="card-img-top"
+                                alt="Pasta meal">
+                            <span class="discount-badge">15% OFF</span>
+                        </div>
+
+                        <div class="card-body">
+                            <span class="deal-category">PASTA SPECIAL</span>
+                            <h5 class="card-title">Pasta Comfort Deal</h5>
+                            <p class="card-text">
+                                A flavourful pasta meal at a price
+                                worth coming back for.
+                            </p>
+
+                            <div class="deal-card-bottom">
+                                <div>
+                                    <span class="old-price">₹299</span>
+                                    <div class="new-price">₹249</div>
+                                </div>
+
+                                <button class="btn claim-deal-btn"
+                                        data-name="Pasta Comfort Deal"
+                                        data-price="249">
+                                    Get Deal +
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Deal 4 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card deal-card h-100">
+                        <div class="deal-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80"
+                                class="card-img-top"
+                                alt="Fresh vegetarian meal">
+                            <span class="discount-badge">SAVE ₹50</span>
+                        </div>
+
+                        <div class="card-body">
+                            <span class="deal-category">VEG SPECIAL</span>
+                            <h5 class="card-title">Veggie Delight</h5>
+                            <p class="card-text">
+                                A satisfying vegetarian meal with
+                                fresh and flavourful ingredients.
+                            </p>
+
+                            <div class="deal-card-bottom">
+                                <div>
+                                    <span class="old-price">₹249</span>
+                                    <div class="new-price">₹199</div>
+                                </div>
+
+                                <button class="btn claim-deal-btn"
+                                        data-name="Veggie Delight"
+                                        data-price="199">
+                                    Get Deal +
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Deal 5 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card deal-card h-100">
+                        <div class="deal-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80"
+                                class="card-img-top"
+                                alt="Chocolate cake dessert">
+                            <span class="discount-badge">SWEET DEAL</span>
+                        </div>
+
+                        <div class="card-body">
+                            <span class="deal-category">DESSERT SPECIAL</span>
+                            <h5 class="card-title">Sweet Tooth Treat</h5>
+                            <p class="card-text">
+                                Add a chocolate dessert to your day
+                                with this sweet offer.
+                            </p>
+
+                            <div class="deal-card-bottom">
+                                <div>
+                                    <span class="old-price">₹199</span>
+                                    <div class="new-price">₹149</div>
+                                </div>
+
+                                <button class="btn claim-deal-btn"
+                                        data-name="Sweet Tooth Treat"
+                                        data-price="149">
+                                    Get Deal +
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Deal 6 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card deal-card h-100">
+                        <div class="deal-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=80"
+                                class="card-img-top"
+                                alt="Iced coffee drink">
+                            <span class="discount-badge">SAVE ₹30</span>
+                        </div>
+
+                        <div class="card-body">
+                            <span class="deal-category">DRINK SPECIAL</span>
+                            <h5 class="card-title">Coffee Break</h5>
+                            <p class="card-text">
+                                Take a break with a smooth, chilled
+                                coffee at a special price.
+                            </p>
+
+                            <div class="deal-card-bottom">
+                                <div>
+                                    <span class="old-price">₹129</span>
+                                    <div class="new-price">₹99</div>
+                                </div>
+
+                                <button class="btn claim-deal-btn"
+                                        data-name="Coffee Break"
+                                        data-price="99">
+                                    Get Deal +
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Bottom CTA -->
+    <section class="deals-bottom-cta">
+        <div class="container">
+            <h2>Found something you love?</h2>
+            <p>Explore the complete Hangny menu and find your next favourite.</p>
+            <a href="menu.html" class="deals-primary-btn">
+                Browse Full Menu →
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="deals-footer">
+        <div class="container">
+            <div class="deals-footer-top">
+                <a href="home.html" class="deals-footer-brand">
+                    Han<span>gny</span>
+                </a>
+
+                <p>Good food. Great mood. Always Hangny.</p>
+
+                <div class="deals-footer-links">
+                    <a href="home.html">Home</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="cart.html">Cart</a>
+                </div>
+            </div>
+
+            <hr>
+
+            <p class="deals-copyright">
+                © 2026 Hangny Restaurant. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="deals.js"></script>
+
+</body>
+</html>
