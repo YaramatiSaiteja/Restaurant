@@ -46,6 +46,64 @@
             </ul>
         </div>
     </nav>
+    <!-- Cart Section -->
+<section class="cart-section">
+    <div class="container">
+        <div class="cart-heading">
+            <h1>Your Shopping Cart 🛒</h1>
+            <p>Review your delicious choices before checking out.</p>
+        </div>
+
+        <div class="row">
+            <!-- Cart Items -->
+            <div class="col-lg-8">
+                <div id="cartItems" class="cart-items">
+                    <!-- Items will be added dynamically using cart.js -->
+                </div>
+
+                <div id="emptyCart" class="empty-cart d-none">
+                    <h3>Your cart is empty!</h3>
+                    <p>Looks like you haven't added anything yet.</p>
+                    <a href="menu.html" class="btn continue-btn">
+                        Explore Menu
+                    </a>
+                </div>
+
+                <a href="menu.html" class="continue-shopping">
+                    ← Continue Shopping
+                </a>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="col-lg-4">
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="subtotal">₹0.00</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Delivery Fee</span>
+                        <span id="deliveryFee">₹40.00</span>
+                    </div>
+
+                    <hr>
+
+                    <div class="summary-row total-row">
+                        <strong>Total</strong>
+                        <strong id="total">₹0.00</strong>
+                    </div>
+
+                    <button id="checkoutBtn" class="btn checkout-btn" disabled>
+                        Proceed to Checkout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
