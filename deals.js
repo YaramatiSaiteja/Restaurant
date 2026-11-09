@@ -3,10 +3,10 @@ let loggedInUser = localStorage.getItem("loggedInUser");
 let welcomeUserEl = document.getElementById("welcomeUser");
 let logoutBtn = document.getElementById("logoutBtn");
 
-    if (loggedInUser) {
-        welcomeUserEl.textContent = `Welcome, ${loggedInUser.value}!`;
+    if (!loggedInUser) {
+        window.location.href = "login.html";
     } else {
-        welcomeUserEl.textContent = "Welcome, Guest!";
+        welcomeUserEl.textContent = "Welcome, " + loggedInUser;
     }
 
  logoutBtn.addEventListener("click",function(){

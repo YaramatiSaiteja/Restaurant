@@ -35,7 +35,7 @@ loginForm.addEventListener("submit", function(event){
     return;
   }
 
-  localStorage.setItem("loggedInUser", username);
+  localStorage.setItem("loggedInUser", name);
 
   console.log("Stored user:", localStorage.getItem("loggedInUser"));
   console.log("All storage:", localStorage);
