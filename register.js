@@ -21,6 +21,12 @@ password.addEventListener("blur", function () {
         : "";
 });
 
+confirmPassword.addEventListener("blur", function () {
+    confirmPasswordError.textContent = confirmPassword.value === ""
+        ? "Please confirm your password."
+        : "";
+});
+
 registerForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -42,6 +48,11 @@ registerForm.addEventListener("submit", function (event) {
         : "";
 
     if (name === "" || pass === "" || confirmPass === "") {
+        return;
+    }
+
+    if(pass !== confirmPass) {
+        confirmPasswordError.textContent = "Passwords do not match.";
         return;
     }
 
