@@ -2,9 +2,12 @@
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 const registerForm = document.getElementById("registerForm");
+const confirmPassword = document.getElementById("confirmPassword");
 
 const passwordError = document.getElementById("passwordError");
+const confirmPasswordError = document.getElementById("confirmPasswordError");
 const usernameError = document.getElementById("usernameError");
+
 
 username.addEventListener("blur", function () {
     usernameError.textContent = username.value.trim() === ""
@@ -23,6 +26,7 @@ registerForm.addEventListener("submit", function (event) {
 
     const name = username.value.trim();
     const pass = password.value;
+    const confirmPass = confirmPassword.value;
 
     // Validate inputs
     usernameError.textContent = name === ""
@@ -33,7 +37,11 @@ registerForm.addEventListener("submit", function (event) {
         ? "Password is required."
         : "";
 
-    if (name === "" || pass === "") {
+    confirmPasswordError.textContent = confirmPass === ""
+        ? "Please confirm your password."
+        : "";
+
+    if (name === "" || pass === "" || confirmPass === "") {
         return;
     }
 

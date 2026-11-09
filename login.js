@@ -4,6 +4,7 @@ let registerButton = document.getElementById("registerButton");
 let passwordError = document.getElementById("passwordError");
 let usernameError = document.getElementById("usernameError");
 let loginForm = document.getElementById("loginForm");
+let logoutBtn = document.getElementById("logoutBtn");
 
 
 username.addEventListener("blur",function(){
@@ -33,6 +34,8 @@ loginForm.addEventListener("submit", function(event){
     passwordError.textContent = "Invalid username or password.";
     return;
   }
+
+  localStorage.setItem("loggedInUser", username);
 
   window.location.href = "menu.html";
 });
