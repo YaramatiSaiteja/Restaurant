@@ -18,10 +18,6 @@ logoutBtn.addEventListener("click",function(){
     window.location.href = "landing.html";
 });
 
-//Menu
-btnElement.addEventListener("click", function() {
-    let menuElement = document.getElementById("menu");
-    menuElement.style.display = "block";
-});
+
 
 

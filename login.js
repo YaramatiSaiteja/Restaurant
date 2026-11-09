@@ -37,5 +37,8 @@ loginForm.addEventListener("submit", function(event){
 
   localStorage.setItem("loggedInUser", username);
 
+  console.log("Stored user:", localStorage.getItem("loggedInUser"));
+  console.log("All storage:", localStorage);
+
   window.location.href = "menu.html";
 });
